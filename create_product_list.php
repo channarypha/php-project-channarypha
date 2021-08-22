@@ -7,7 +7,6 @@
         <?php
             if(isset($_POST['submit'])){
 
-
                 // upload image
                 $filename = $_FILES['file']['name'];
                 $filesize = $_FILES['file']['size'];
@@ -21,7 +20,6 @@
                 }else{
                     move_uploaded_file($tmp_name,$dir.$filename);
                 }
-
 
                 // create
                 require_once('inc/database.php');

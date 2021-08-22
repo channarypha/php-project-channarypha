@@ -150,10 +150,22 @@ function logout() {
 }
 
 function register($value) {
-  $username = trim($value['username']);
-  $password = password_hash(trim($value['password']), PASSWORD_DEFAULT);
-  $position = $value['position'];
-  return db()->query("INSERT INTO users(username, password, position) VALUES('$username', '$password', '$position')");   
+  $db = new mysqli('localhost', 'root', '', 'electronic_shop');
+  $comform = $value['comform'];
+  $username = $value['username'];
+  if ($username === $comform){
+    // $username = $value['username'];
+    // $password = password_hash(trim($value['password']), PASSWORD_DEFAULT);
+    $position = $value['position'];
+    $success = $db->query("INSERT INTO users(username, password, position) VALUES('$username', '$password', '$position')");   
+    
+    if($success){
+        header("Location: index.php?page=home");
+    } else {
+        echo("Error: <br>" . $db->error);
+    }
+}
+  
 }
 
 
