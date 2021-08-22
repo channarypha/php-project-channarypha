@@ -15,10 +15,10 @@
                 $dir = "assets/images/";
 
                 if($filetype != ("image/png" || "image/jpg" || "image/jpeg" || "pdf")){
-                    echo "Only JPG images allowed";
+                    echo "images allowed";
 
                 }else{
-                    move_uploaded_file($tmp_name,$dir.$filename);
+                    move_uploaded_file($tmp_name, $dir.$filename);
                 }
 
                 // create

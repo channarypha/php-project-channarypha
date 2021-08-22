@@ -5,6 +5,6 @@
 
         if($isCreated){
             header("Location: index.php?page=products_list");
-	    exit;
+	    
         }
     }
