@@ -2,8 +2,8 @@
     <form action="../register_model.php" method="post" style="width:50%"> 
     <h1 class="heading"> Register </h1>
         <div class="inputBox">
-            <input type="text" placeholder="username">
-            <input type="password" placeholder="password">
+            <input type="text" placeholder="username" name="username">
+            <input type="password" placeholder="password" name="password">
             <!-- <input type="password" placeholder="comform password"> -->
         </div>
         <input type="hidden" name="position" class="form-control" value="user">

@@ -1,6 +1,6 @@
 <?php 
     if (isset($_SESSION['username'])):
-        header('Location: http://localhost/login/?page=welcome');
+        header('Location: http://localhost/index.php?page=welcome');
     else:         
 ?>
 <section class="contact">    
