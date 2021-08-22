@@ -128,19 +128,19 @@ function login($value) {
     }
     header("Location: http://localhost/php-project-channarypha/?page=login");
 
-    // $users = getUser();
-    // foreach ($users as $user) {
-    //    echo (password_verify($password,trim($user['password'])));
-    //    if(password_verify($password,trim($user['password'])) and $username === $user['username']) {
-    //         $_SESSION['username'] = $username;
-    //         $_SESSION['position'] = $user['position'];
-    //         $_SESSION['message'] = "Login successful";
-    //         header('Location: http://localhost/login/?page=welcome');
-    //    }else {
-    //         $_SESSION['message'] = "Login failed";
-    //         // header("Location: http://localhost/login/?page=login");
-    //    }
-    // }
+    $users = getUser();
+    foreach ($users as $user) {
+       echo (password_verify($password,trim($user['password'])));
+       if(password_verify($password,trim($user['password'])) and $username === $user['username']) {
+            $_SESSION['username'] = $username;
+            $_SESSION['position'] = $user['position'];
+            $_SESSION['message'] = "Login successful";
+            header('Location: http://localhost/login/?page=welcome');
+       }else {
+            $_SESSION['message'] = "Login failed";
+            // header("Location: http://localhost/login/?page=login");
+       }
+    }
 }
 
 function logout() {
@@ -160,6 +160,5 @@ function register($value) {
 //read more
 function readMore($text,$number){
     return substr($text,0,$number);    
-  
 }
     
