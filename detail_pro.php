@@ -20,10 +20,11 @@
             
             
                 <h1><?=$product['product_name']?></h1>
+                <br>
                 <h2>upto <?=$product['discount']?> off</h2>
                 
-            </div>
-
+        </div>
+        <br>
         </div>
             <h3 class="card-text" style="margin-left: 20%"><?=$product['discription'] ?></h3>
         </div>

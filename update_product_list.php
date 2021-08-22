@@ -31,6 +31,9 @@
                 <input type="hidden" value="<?= $product['image'] ?> "  name="image">
             </div>
             <div class="form-group">
+                <input type="text" class="form-control" placeholder="Description" name="discription" value="<?= $row['discription'] ?>" style="font-size: 20px; margin: auto; width: 50%; padding: 20px">
+            </div>
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-block" style="font-size: 20px; margin: auto; width: 10%; padding: 12px">Create</button>
             </div>
         </form>
