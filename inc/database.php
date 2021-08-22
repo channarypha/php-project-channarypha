@@ -138,7 +138,7 @@ function login($value) {
             header('Location: http://localhost/login/?page=welcome');
        }else {
             $_SESSION['message'] = "Login failed";
-            // header("Location: http://localhost/login/?page=login");
+            header("Location: http://localhost/login/?page=login");
        }
     }
 }
@@ -154,8 +154,8 @@ function register($value) {
   $comform = $value['comform'];
   $username = $value['username'];
   if ($username === $comform){
-    // $username = $value['username'];
-    // $password = password_hash(trim($value['password']), PASSWORD_DEFAULT);
+    $username = $value['username'];
+    $password = password_hash(trim($value['password']), PASSWORD_DEFAULT);
     $position = $value['position'];
     $success = $db->query("INSERT INTO users(username, password, position) VALUES('$username', '$password', '$position')");   
     
