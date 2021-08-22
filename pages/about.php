@@ -1,5 +1,5 @@
-<section class="banner-container">
-        <div class="banner">
+<section class="banner-container" method="post">
+        <!-- <div class="banner">
             <img src="https://i.pinimg.com/736x/b9/90/75/b99075bdb496faa8421d88f1f26fa307.jpg" alt="">
             <div class="content">
                 <h3>special offer</h3>
@@ -31,21 +31,32 @@
                 <p>upto 30% off</p>
                 <a href="#" class="btn" style="background-color:brown;font-size:300%">check out</a>
             </div>
-        </div>
-        <div class="banner">
+        </div> -->
+        <!-- <div class="banner">
             <img src="https://i.pinimg.com/originals/47/08/ac/4708ac0a67aa83d05ca8cad106043417.jpg" alt="">
             <div class="content">
                 <h3>limited offer</h3>
                 <p>upto 30% off</p>
                 <a href="#" class="btn" style="background-color:brown;font-size:300%">check out</a>
             </div>
-        </div>
+        </div> -->
+        <?php
+        require_once('inc/database.php');
+            $products= getAllProducts();
+            
+            foreach ($products as $product):
+                $description = readMore($product['discription'], 20);
+                
+        ?>
         <div class="banner">
-            <img src="https://i.ytimg.com/vi/LCGnT3iQdMQ/maxresdefault.jpg" alt="">
-            <div class="content">
-                <h3>limited offer</h3>
-                <p>upto 30% off</p>
-                <a href="#" class="btn" style="background-color:brown;font-size:300%">check out</a>
+            <img src="assets/images/<?=$product['image']?>" alt="">
+            
+            <div class="content" >
+                <h3 style="color: green;">limited offer</h3>
+                <p style="color: pink;">upto <?=$product['discount']?> off</p>
+                <p style="color: #AE00FB;"><?=$description?>...<a href="detail_pro.php?id=<?=$product['product_id']?>" class="btn" style="background-color:brown;font-size:300%">check out</a></p>
             </div>
+            
         </div>
+        <?php endforeach;?>
 </section>

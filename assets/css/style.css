@@ -706,3 +706,8 @@ section{
   padding: 30px;
   font-size: 200px;
 } */
+#input{
+  font-size: 20px; 
+  margin: auto; 
+  width: 50%;
+}
