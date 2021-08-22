@@ -34,7 +34,7 @@
                 <input type="text" class="form-control" placeholder="Description" name="discription" value="<?= $row['discription'] ?>" style="font-size: 20px; margin: auto; width: 50%; padding: 20px">
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block" style="font-size: 20px; margin: auto; width: 10%; padding: 12px">Create</button>
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 20px; margin: auto; width: 10%; padding: 12px">Update</button>
             </div>
         </form>
         <?php endforeach; ?>
