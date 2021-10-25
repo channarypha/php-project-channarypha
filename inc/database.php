@@ -3,26 +3,23 @@
         return new mysqli('localhost', 'root', '', 'electronic_shop');
     }
 
-
     // get all products
     function getAllProducts() {
         $db = new mysqli('localhost', 'root', '', 'electronic_shop');
+
         return db()->query("SELECT * FROM products 
         INNER JOIN categories ON products.category_id = categories.category_id
         INNER JOIN brands ON products.brand_id = brands.brand_id
         ");
     }
 
-
-
     // select one products
     function selectOneProduct($id) {
         $db = new mysqli('localhost', 'root', '', 'electronic_shop');
+
         return db()->query("SELECT * FROM products WHERE product_id = $id");
     }
 
-
-    
     // create product list
     function createProductList($value) {
         $db = new mysqli('localhost', 'root', '', 'electronic_shop');
@@ -34,7 +31,13 @@
         $discount = $value['discount'];
         $description = $value['discription'];
         $image= $_FILES['file']['name'];
-        $success = $db->query("INSERT INTO products(product_name, brand_id, category_id, price, discount, image, discription) VALUES ('$product_name', $brand_id, $category_id, $price, $discount, '$image', '$description')");
+
+        $success = $db->query(
+        "INSERT INTO 
+        products(product_name, brand_id, category_id, price, discount, image, discription) 
+        VALUES 
+        ('$product_name', $brand_id, $category_id, $price, $discount, '$image', '$description')");
+
         if($success){
             header('Location: index.php?page=products_list');
         } else {
@@ -167,7 +170,6 @@ function register($value) {
 }
   
 }
-
 
 //read more
 function readMore($text,$number){

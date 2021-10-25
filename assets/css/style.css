@@ -16,7 +16,6 @@
 }
 
 *::selection{
-  /* background:var(--green); */
   color:#fff;
 }
 
@@ -34,17 +33,12 @@ section{
 .btn{
   display: inline-block;
   margin-top: 1rem;
-  /* background:var(--green); */
   color:#fff;
   padding:.8rem 3rem;
   font-size: 1.7rem;
   text-align: center;
   cursor: pointer;
 }
-
-/* .btn:hover{
-  background:var(--black);
-} */
 
 .heading{
   text-align: center;
@@ -56,7 +50,6 @@ section{
 }
 
 .heading span{
-  /* color:var(--green); */
   text-transform: uppercase;
 }
 
@@ -69,7 +62,6 @@ section{
 }
 
 .logo{
-  /* color:var(--black); */
   color: #43c278;
   font-weight: bolder;
   font-size: 3rem;
@@ -79,7 +71,6 @@ section{
 
 .logo i{
   padding-right: .5rem;
-  /* color:var(--green); */
 }
 
 .header-1 .search-box-container{
@@ -137,7 +128,6 @@ section{
 }
 
 .header-2 .navbar a:hover{
-  /* background:var(--green); */
   color:#fff;
 }
 
@@ -146,10 +136,6 @@ section{
   color:var(--black);
   padding-left: 1rem;
 }
-
-/* .header-2 .icons a:hover{
-  color:var(--green);
-} */
 
 #menu-bar{
   font-size: 3rem;
@@ -375,10 +361,7 @@ section{
   height: 25%;
   font-size: 25px;
 }
-/* .product div a .btn{
-  width: 50px;
-  height: 400px;
-} */
+
 .deal{
   background:url(../images/deal-bg.jpg) no-repeat;
   background-position: center;
@@ -675,10 +658,7 @@ section{
 }
 .ed{
   display: flex;
-  /* margin: auto; */
-  /* height: inherit; */
   width: 40%;
-  /* background-color:green; */
   font-size:250%;
 }
 #e{
@@ -699,13 +679,6 @@ section{
   margin: auto;
 }
 
-/* container of create form */
-/* #text{
-  width: 50%;
-  margin: auto;
-  padding: 30px;
-  font-size: 200px;
-} */
 #input{
   font-size: 20px; 
   margin: auto; 
