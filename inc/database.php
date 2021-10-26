@@ -119,6 +119,7 @@ function searchByProductName($category_name){
 
 // login
 function getUser() {
+
     return db()->query("SELECT * FROM users");
 }
 
