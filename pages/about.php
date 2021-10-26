@@ -2,7 +2,7 @@
         
         <?php
 
-        require_once('inc/database.php');
+            require_once('inc/database.php');
 
             $products= getAllProducts();
             
