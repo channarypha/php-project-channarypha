@@ -8,9 +8,15 @@
 
     <div class="content">
 
-        <span>extraordinary features</span>
-        <h3>shopping ?</h3>
-        <a href="?page=products_list" class="btn" style="background-color:pink;font-size:300%">get started</a>
+        <span> extraordinary features </span>
+
+        <h3> shopping ? </h3>
+
+        <a href="?page=products_list" class="btn" style="background-color:pink;font-size:300%">
+
+            get started
+            
+        </a>
     
     </div>
     
