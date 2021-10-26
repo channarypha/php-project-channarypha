@@ -50,6 +50,7 @@
     // delete prodcut list
     function deleteProductList($id) {
         $db = new mysqli('localhost', 'root', '', 'electronic_shop');
+
         $success=$db->query("DELETE FROM products WHERE product_id = '$id'");
         if($success){
             header('Location: index.php?page=products_list');
@@ -118,7 +119,6 @@ function searchByProductName($category_name){
 
 // login
 function getUser() {
-    $db = new mysqli('localhost', 'root', '', 'electronic_shop');
     return db()->query("SELECT * FROM users");
 }
 

@@ -27,6 +27,7 @@
 
                 // create
                 require_once('inc/database.php');
+                
                 $isCreated = createProductList($_POST);
 
                 if($isCreated){
